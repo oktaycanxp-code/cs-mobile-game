@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>CS Mobile Strike</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="hud">
+        <div class="hud-item">
+          <span class="label">SKOR</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="hud-item">
+          <span class="label">CAN</span>
+          <div class="health-wrap">
+            <div id="healthBar" class="health-bar"></div>
+          </div>
+        </div>
+        <div class="hud-item">
+          <span class="label">SÜRE</span>
+          <strong id="timer">60</strong>
+        </div>
+      </header>
+
+      <canvas id="gameCanvas" width="420" height="720" aria-label="CS Mobil Oyun Alanı"></canvas>
+
+      <div id="startOverlay" class="overlay visible">
+        <div class="panel">
+          <p class="eyebrow">MOBILE SHOOTER</p>
+          <h1>CS Mobile Strike</h1>
+          <p>Rakipleri indir, canını koru ve skoru arttır.</p>
+          <button id="startBtn">Başla</button>
+        </div>
+      </div>
+
+      <div id="gameOverOverlay" class="overlay hidden">
+        <div class="panel">
+          <p class="eyebrow">OYUN BİTTİ</p>
+          <h2>Oyun bitti</h2>
+          <p id="finalScore">Skor: 0</p>
+          <button id="restartBtn">Tekrar Dene</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
